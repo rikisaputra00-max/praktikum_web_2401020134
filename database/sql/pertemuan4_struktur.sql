@@ -26,3 +26,6 @@ CREATE TABLE mahasiswa (
     CONSTRAINT chk_usia
         CHECK (usia BETWEEN 17 AND 60)
 ) ENGINE=InnoDB;
+
+-- Tambahan index untuk optimasi pencarian nama mahasiswa
+CREATE INDEX idx_nama_mahasiswa ON mahasiswa(nama);
